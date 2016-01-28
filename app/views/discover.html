@@ -1,0 +1,27 @@
+<div class="fount-discover-page">
+  <div class="clearfix post-364 page type-page status-publish hentry">
+    <div class="page-content clearfix">
+      <section class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="spb_wrapper portfolio-wrap">
+              <h1 class="fount-discover-header">DISCOVER</h1>
+              <div infinite-scroll='loadMore()' infinite-scroll-disabled='!hasMoreData' infinite-scroll-distance='0' class="container">
+                <ul class="portfolio-items products gallery-portfolio filterable-items row clearfix">
+                  <li ng-repeat="discoverMedia in discoverMedias track by $index" ng-click="invokeDiscoverShowcase(discoverMedia, $index)" class="product portfolio-item fount-discover-post" id="fount-showcase-post_{{$index}}">
+                    <figure>
+                      <div class="fount-discover-img">
+                        <img ng-src="{{discoverMedia.lowResolutionURL}}" fount-err-src="img/err-src.png">
+                      </div>
+                    </figure>
+                    <div ng-show="activePost == {{$index}}" class="discover-showcase-marker"><img src="img/showcase-marker.png"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
